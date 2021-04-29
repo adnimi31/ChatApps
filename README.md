@@ -2,12 +2,12 @@
 ChatApps with php and ajax
 ChatApps ini dibuat oleh AM
 Silahkan digunakan dengan gratis, mohon jagan hapus creditnya ini(readme.txt, maupun readme.md)
-
+https://github.com/adnimi31
 ===========================================================================
 
 spesifikasi:
 
-*ChatApps dibuat dengan php 5.6
+*ChatApps dibuat dengan php 5.6 secara prosedural belum object oriented
 
 *realtime untuk mendapatkan chat dan mengirim chat nya sudah menggunakan ajax
 
