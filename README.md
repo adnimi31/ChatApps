@@ -1,7 +1,9 @@
 # ChatApps
 ChatApps with php and ajax
+
 ChatApps ini dibuat oleh AM
-Silahkan digunakan dengan gratis, mohon jagan hapus creditnya ini(readme.txt, maupun readme.md)
+Silahkan digunakan dengan gratis, mohon jagan hapus creditnya(readme.txt, maupun readme.md)
+https://github.com/adnimi31/
 
 ===========================================================================
 
