@@ -7,5 +7,15 @@
   <title>Chat AppTemplate | AM</title>
   <link rel="stylesheet" href="style.css"> 
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <script src="js/jquery.min.js"></script> 
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  
+  <!-- bagian emoji --> 
+  <link href="emojiassets/emoji-picker/lib/css/emoji.css" rel="stylesheet">
+  <script src="emojiassets/emoji-picker/lib/js/config.js"></script>
+  <script src="emojiassets/emoji-picker/lib/js/util.js"></script>
+  <script src="emojiassets/emoji-picker/lib/js/jquery.emojiarea.js"></script>
+  <script src="emojiassets/emoji-picker/lib/js/emoji-picker.js"></script>
+
 </head>

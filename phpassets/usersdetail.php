@@ -1,3 +1,21 @@
+
+<style type="text/css">
+
+.input-row {
+   width: 90%;
+   height: 0px;
+}
+/*script untuk mengatur emoji agar diatas*/
+.emoji-menu { bottom: 60px!important; }
+.icon-smile:before {
+    content: " ";
+    width: 16px;
+    height: 16px;
+    display: flex;
+    flex-direction: column-reverse;
+    background: url(icon-smile.png);
+}
+</style>
 <?php
 session_start();
   if(!isset($_SESSION['uniqueid'])){
@@ -29,9 +47,31 @@ if(isset($_POST['uniqueid']))
           <form action="" class="typing-area" id="frmdata" method="POST">
             <!-- disini bagian kode yg akan dikirim ke ajaz yg meload setiap 0,5 detik di bawah -->
             <input type="text" id="incoming_id" name="incoming_id" class="incoming_id" value="<?php echo $response['uniqueid']; ?>" hidden>
-            <input type="text" id="message" name="message"  class="form-control"  placeholder="Type a message here..." autocomplete="off">
+            <div class="input-row">
+              <p class="emoji-picker-container">
+                <textarea class="input-field" data-emojiable="true"
+              data-emoji-input="unicode" type="text" name="message"
+              id="message" placeholder="Tulis pesan disini...">  </textarea>
+              </p>
+            </div>
              <input type="button" id="button" class="btn btn-primary btn-sm" value="Kirim">
           </form>
+
+<!-- script emoji -->
+<script type="text/javascript">
+  $(function () {
+    // ketika gambar emoji di klik 
+      window.emojiPicker = new EmojiPicker({
+        // status selector emoji kita jadikan true
+        emojiable_selector: '[data-emojiable=true]',
+        // lalu cari assetsnya di directory dibawah
+        assetsPath: 'emojiassets/emoji-picker/lib/img/',
+        popupButtonClasses: 'icon-smile'
+      });
+
+      window.emojiPicker.discover();
+  });
+</script>
 
 <!-- ajax untuk mengirim data input pesan -->
 <script type="text/javascript">
@@ -46,7 +86,7 @@ if(isset($_POST['uniqueid']))
                  }
              });
     // ketika data sudah masuk maka kita hilangkan/refresh chat inputnya dengan cara di bawah ini 
-    document.getElementById('message').value = '';
+     $(".input-field").empty();
 
   });
 

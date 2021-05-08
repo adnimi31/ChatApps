@@ -17,7 +17,7 @@ include_once "../connect.php";
                     <p style="text-align: left;" >
                     '.$response['pesan'].'
                     <br>
-                    <span style="font-size: 12px;" >'.$response['waktu'].'</span>
+                    <span style="font-size: 10px;" >'.$response['waktu'].'</span>
                     </p>
                   </div>
                 </div>';
@@ -28,7 +28,7 @@ include_once "../connect.php";
                     <p style="text-align: left;" >
                     '.$response['pesan'].'
                     <br>
-                    <span style="font-size: 12px;" >'.$response['waktu'].'</span>
+                    <span style="font-size: 10px;" >'.$response['waktu'].'</span>
                     </p>
                   </div>
                 </div>';
