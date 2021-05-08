@@ -20,12 +20,21 @@ spesifikasi:
 ===========================================================================
 
 point penting:
+
+*jika ingin membuat database sendiri pastikan database dan table chatnya(disini message) sudah di alter menjadi utf8mb4 agar emoji bisa terbaca
+
 *ChatApps ini tidak cocok untuk aplikasi chat bersekala besar 
+
 *ChatApps hanya cocok digunakan untuk chat internal atau sebagai pembelajaran, karena masih menggunakan ajax yg notabenya akan sangat membebani server untuk requestnya
+
 *jika ingin membuat aplikasi chat bersekala besar, saya sarankan untuk mempelajari websocket 
+
 *untuk scripnya, sebisa mungkin saya jelaskan dengan komentar yg ada pada script tersebut
+
 *incoming chat = chat yg masuk dari user
+
 *outgoing chat = chat yg kita kirimkan ke user
+
 *test user bisa dilihat di phpmyadmin, passwordnya 123456
 
 ===========================================================================
