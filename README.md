@@ -15,6 +15,8 @@ spesifikasi:
 
 *ChatApps sudah dilengkapi redirect otomatis kalau session belum dihancurkan
 
+*ChatApps sudah dilengkapi dengan emoji, fitur search
+
 ===========================================================================
 
 point penting:
