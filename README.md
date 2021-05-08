@@ -40,3 +40,22 @@ point penting:
 ===========================================================================
 
 Thanks for CodingNepal for CSs Template
+
+===========================================================================
+
+Preview Program
+
+*Login/Index
+
+![Login](https://user-images.githubusercontent.com/23350205/117543395-d6084e80-b046-11eb-89e0-31d97e9864c5.PNG)
+
+*Register
+
+![register](https://user-images.githubusercontent.com/23350205/117543450-2089cb00-b047-11eb-89ff-7b13677e0468.PNG)
+
+*Aplikasi
+
+![aplikasi](https://user-images.githubusercontent.com/23350205/117543541-7b232700-b047-11eb-9ee6-d900b733c40c.PNG)
+
+
+
