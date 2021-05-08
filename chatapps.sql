@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Apr 2021 pada 16.32
+-- Waktu pembuatan: 08 Bulan Mei 2021 pada 16.40
 -- Versi server: 10.1.38-MariaDB
 -- Versi PHP: 5.6.40
 
@@ -32,9 +32,9 @@ CREATE TABLE `message` (
   `message_id` int(11) NOT NULL,
   `incoming_id` int(6) NOT NULL,
   `outgoing_id` int(6) NOT NULL,
-  `pesan` text NOT NULL,
+  `pesan` mediumtext COLLATE utf8mb4_bin NOT NULL,
   `waktu` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
 -- Dumping data untuk tabel `message`
@@ -42,7 +42,22 @@ CREATE TABLE `message` (
 
 INSERT INTO `message` (`message_id`, `incoming_id`, `outgoing_id`, `pesan`, `waktu`) VALUES
 (1, 210001, 210002, 'test', '2021-04-29 13:09:23'),
-(2, 210002, 210001, 'test juga', '2021-04-29 13:10:27');
+(2, 210002, 210001, 'test juga', '2021-04-29 13:10:27'),
+(3, 210002, 210001, 'ðŸ˜„', '2021-05-06 16:14:26'),
+(4, 210002, 210001, 'ðŸ˜', '2021-05-06 16:20:24'),
+(5, 210001, 210002, 'testðŸ˜…ðŸ˜…ðŸ˜…', '2021-05-06 16:26:16'),
+(6, 210001, 210002, 'ðŸ‘', '2021-05-06 16:32:34'),
+(7, 210001, 210002, 'ðŸ˜‚', '2021-05-06 16:33:55'),
+(8, 210001, 210002, 'ðŸ±', '2021-05-06 16:36:32'),
+(9, 210002, 210001, 'ðŸ‘', '2021-05-06 16:37:49'),
+(10, 210002, 210001, 'ðŸ˜•', '2021-05-06 16:41:34'),
+(11, 210002, 210001, 'ðŸŽŒ  ', '2021-05-06 16:46:01'),
+(12, 210001, 210002, 'ðŸ‘  ', '2021-05-06 16:46:56'),
+(13, 210001, 210002, 'ðŸ‘Œ  ', '2021-05-06 16:55:45'),
+(14, 210001, 210002, 'ðŸ‘  ', '2021-05-06 16:57:29'),
+(15, 210001, 210002, 'ðŸ˜’  ', '2021-05-06 17:02:12'),
+(16, 210001, 210002, 'ok percobaan berhasilÂ ðŸ˜Š', '2021-05-06 17:02:50'),
+(17, 210003, 210002, 'testÂ ðŸ˜Š', '2021-05-08 08:50:16');
 
 -- --------------------------------------------------------
 
@@ -98,7 +113,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `message`
 --
 ALTER TABLE `message`
-  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
