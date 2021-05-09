@@ -4,7 +4,7 @@ session_start();
     header("location: ../logout.php");
 }
 $outgoing_id=$_SESSION['uniqueid'];
-$incoming_id=$_POST['incoming_id'];
+$incoming_id=$_GET['incoming_id'];
 include_once "../connect.php";
     $sql = mysql_query("SELECT*FROM message WHERE incoming_id=$incoming_id AND outgoing_id=$outgoing_id OR incoming_id=$outgoing_id AND outgoing_id=$incoming_id  ORDER BY message_id DESC") or die(mysql_error());
     // penting: data chat harus order desc yg berarti tampilkan dari bawah, karena  pada css kita revers load chatnya

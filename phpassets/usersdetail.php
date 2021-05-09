@@ -1,4 +1,3 @@
-
 <style type="text/css">
 
 .input-row {
@@ -94,34 +93,16 @@ if(isset($_POST['uniqueid']))
 
 <!-- script untuk meload data setiap 0,5 detik -->
 <script type="text/javascript">
-setInterval(() =>{
-    // cari form dengan class typing-area
-    const form = document.querySelector(".typing-area"),
-    //setelah form dengan class tersebut ditemukan cari didalamnya dengan class incoming_id
-    incoming_id = form.querySelector(".incoming_id").value,
-    chatBox = document.querySelector(".chat-box");
-    // mulai httprequest
-    let xhr = new XMLHttpRequest();
-    // lalu buat method dan url pengeksekusianya
-    xhr.open("POST", "phpassets/datachat.php", true);
-    //lalu load
-    xhr.onload = ()=>{
-      if(xhr.readyState === XMLHttpRequest.DONE){
-        //jika statusnya 200 (ok)
-          if(xhr.status === 200){
-            // maka buat variable data respon nya 
-            let data = xhr.response;
-            //dan kembalikan datanya yg didalamnya ada html
-            chatBox.innerHTML = data;
-            
-          }
-      }
-    }
-    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    // kirim data incoming_id tersebut
-    xhr.send("incoming_id="+incoming_id);
-}, 500);
+// jquery ambil dokumin, ketika siap jalankan
+$(document).ready(function(){
+  // jalankan interval/refres setiap 0,5 detik
+  setInterval(function () {
+    // get data dari datachat lalu kembalikan dengan parameter datachat
+    $.get('phpassets/datachat.php?incoming_id='+ $('#incoming_id').val(), function(datachat) {
+      // tampilkan di class chat-box dengan script dibawah
+      $('.chat-box').html(datachat);
+    });
+  }, 500);  
+});
 
-
-</script>  
-    
+</script> 
