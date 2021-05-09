@@ -93,7 +93,7 @@ if(isset($_POST['uniqueid']))
 
 <!-- script untuk meload data setiap 0,5 detik -->
 <script type="text/javascript">
-// jquery ambil dokumin, ketika siap jalankan
+// jquery ambil dokumen, ketika siap jalankan
 $(document).ready(function(){
   // jalankan interval/refres setiap 0,5 detik
   setInterval(function () {
